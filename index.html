@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="options">
+            <div class="lists">
+                <select name="organizations" id="organization-select" class="drop-down-list">
+                    <option value="">Организация</option>
+                </select>
+                <select name="employees" id="employee-select" class="drop-down-list" disabled>
+                    <option value="">Сотрудник</option>
+                </select>
+            </div>
+    
+            <div class="checkboxes">
+                <div class="checkbox">
+                    <input type="checkbox" id="chb-director" name="director">
+                    <label for="director">Директор</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="chb-engineer" name="engineer">
+                    <label for="engineer">Инженер</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="chb-manager" name="manager">
+                    <label for="manager">Менеджер</label>
+                </div>
+            </div>
+    
+            <input class="button" id="add-button" type="button" value="Добавить">
+        </div>
+        
+        <div class="info">
+            <span></span>
+            <input class="button" id="clean-button" type="button" value="Очистить">
+        </div>
+    </div>
+</body>
+</html>

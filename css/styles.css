@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.lists, 
+.options,
+.info {
+    display: flex;
+} 
+
+.lists,
+.checkboxes {
+    margin-right: 10px;
+}
+
+.lists {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 54px;
+    min-width: 230px;
+}
+
+
+.options {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.info {
+    flex-direction: column;
+    align-items: center;
+}
+
+.info > span {
+    min-height: 100px;
+    min-width: 400px;
+}
+
+.frame {
+    width: fit-content;
+    margin: auto;
+    margin-top: 100px;
+    background-color: darkgrey;
+    padding: 15px;
+}
+
+.button {
+    height: 40px;
+    width: fit-content;
+}
