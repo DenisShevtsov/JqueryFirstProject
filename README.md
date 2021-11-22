@@ -1,2 +1,2 @@
 # JqueryTest
-https://denisshevtsov.github.io/JqueryFirstProject/
+https://denisshevtsov.github.io/JqueryTest/
