@@ -1,3 +1,5 @@
+"use strict"
+
 $(function(){
     let organizations = [[1, "Lada"], [2, "Audi"], [3, "Toyoya"]];
     let positions = [[10, "Директор"], [20, "Инженер"], [30, "Менеджер"]];
@@ -55,7 +57,7 @@ $(function(){
     cleanButton.click(() => {textInfo.text('')});
     addButton.click(function() {
         if (!(employeeSelect.val() === '')) {
-            empId = employeeSelect.val();
+            let empId = employeeSelect.val();
             textInfo.append(
                 `${employees[empId-1][1]} - 
                 ${positions[employees[empId-1][3]/10-1][1]} 
