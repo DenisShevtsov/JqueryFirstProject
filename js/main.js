@@ -37,14 +37,21 @@ $(function(){
 
     let organizationSelect = $('#organization-select');
     let employeeSelect = $('#employee-select');
-    let checkboxes = $('.checkbox > input');
+    let checkboxesList = $('.checkboxes-list');
     let addButton = $('#add-button');
     let cleanButton = $('#clean-button');
     let textInfo = $('.info > span');
     
-    checkboxes.each(function(index) {
-        $(this).attr('value', `${positions[index][0]}`);
-    });
+    for (let checkbox of positions) {
+        checkboxesList.append( 
+            $(`<div>
+                <input type="checkbox" value="${checkbox[0]}"> 
+                <label for="director">${checkbox[1]}</label> 
+            </div>`)     
+        );    
+    }
+
+    let checkboxes = $('.checkboxes-list div > input');
 
     for (let [id, name] of organizations) {
         organizationSelect.append(`<option value="${id}">${name}</option>`);
@@ -53,7 +60,7 @@ $(function(){
 
 
     organizationSelect.change(createEmployeeDropDownList);
-    checkboxes.change(createEmployeeDropDownList);
+    checkboxes.click(createEmployeeDropDownList)
     cleanButton.click(() => {textInfo.text('')});
     addButton.click(function() {
         if (!(employeeSelect.val() === '')) {
@@ -68,7 +75,7 @@ $(function(){
 
     function createEmployeeDropDownList(){
         let checked = [];
-        $('.checkbox > input:checkbox:checked').each(function(){
+        $('.checkboxes-list div > input:checkbox:checked').each(function(){
             checked.push($(this).val());
         });
 
