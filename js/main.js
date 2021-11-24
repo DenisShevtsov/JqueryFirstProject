@@ -60,7 +60,7 @@ $(function(){
 
 
     organizationSelect.change(createEmployeeDropDownList);
-    checkboxes.click(createEmployeeDropDownList)
+    checkboxes.change(createEmployeeDropDownList);
     cleanButton.click(() => {textInfo.text('')});
     addButton.click(function() {
         if (!(employeeSelect.val() === '')) {
